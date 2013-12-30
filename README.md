@@ -36,8 +36,7 @@ How-To
 Author
 ======
 
-Joe Mottershaw<br />
-Cloud Eight<br />
+Joe Mottershaw, Cloud Eight<br />
 http://www.cloud-eight.com
 
 
