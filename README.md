@@ -18,6 +18,8 @@ using a `noscript` approach and just reverting the CSS values defined by the ani
 
 It's not pretty, but it got the job done and will do suffice until a better solution is found.
 
+Also note that this doesn't work in Tablets/Mobiles very well yet so it's been disabled in those sized devices
+
 
 How-To
 ======
