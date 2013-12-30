@@ -14,7 +14,7 @@ http://www.cloud-eight.com/github/animations/
 
 Since it uses JavaScript to initiate the animation effect, if JavaScript is disabled it won't work. However, I did
 use the `no-js/js` approach of modernizr.js and to target the CSS properties accordingly but I found it ran smoother
-using a `<noscript`> approach and just reverting the CSS values defined by the animation.css file.
+using a `noscript` approach and just reverting the CSS values defined by the animation.css file.
 
 It's not pretty, but it got the job done and will do suffice until a better solution is found.
 
@@ -23,9 +23,9 @@ How-To
 ======
 
 <ul>
-<li>Add the class `no-js` to your `<html>` tag</li>
+<li>Add the class `no-js` to your `html` tag</li>
 <li>Link both animation.css and animation.js to your document</li>
-<li>Copy the `<noscript>` from the `index.html` file after you've loaded your CSS files</li>
+<li>Copy the `noscript` from the `index.html` file after you've loaded your CSS files</li>
 <li>Add the class `animate` to the desired element</li>
 <li>Then add another class to that element with one of the effects: `slide-up` or `zoom-in` etc</li>
 <li>If you wish to put a delay the animation add the attribute `data-anim-delay`</li>
