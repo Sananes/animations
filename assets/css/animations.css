@@ -171,3 +171,35 @@
 		-ms-transform: rotate(0deg) scale(1);
 		transform: rotate(0deg) scale(1);
 	}
+
+
+/*	#Turn off for touch devices
+//	================================================== */
+
+	@media only screen and (max-width: 959px) {
+		.animate,
+		.animate.slide-up,
+		.animate.slide-right,
+		.animate.slide-down,
+		.animate.slide-left,
+		.animate.zoom-in,
+		.animate.spin-right,
+		.animate.spin-left,
+		.animate.spin-right-zoom-in,
+		.animate.spin-left-zoom-in {
+			top: 0;
+			left: 0;
+			-webkit-opacity: 1;
+			-khtml-opacity: 1;
+			-moz-opacity: 1;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+			filter: alpha(opacity=100);
+			opacity: 1;
+			-webkit-transform:rotate(0deg) scale(1);
+			-moz-transform:rotate(0deg) scale(1);
+			-o-transform:rotate(0deg) scale(1);
+			-ms-transform:rotate(0deg) scale(1);
+			transform:rotate(0deg) scale(1);
+		}
+	}
+			

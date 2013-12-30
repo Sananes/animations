@@ -141,13 +141,13 @@
 	.content.even { background: #F2F2F2; }
 
 	@media only screen and (max-width: 959px) {
-		.container{ width: 748px; }
+		.container { width: 748px; }
 	}
 
 	@media only screen and (max-width: 767px){
-		.container{ width: 420px; }
+		.container { width: 420px; }
 	}
 
 	@media only screen and (max-width: 479px) {
-		.container{ width: 300px; }
+		.container { width: 300px; }
 	}
