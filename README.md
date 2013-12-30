@@ -10,7 +10,7 @@ the least.
 
 I've used it in a couple sites and just tested as I go and kept it pretty basic like in this demo:
 
-http://www.cloud-eight.com/github/animations/
+**Demo:** http://www.cloud-eight.com/github/animations/
 
 Since it uses JavaScript to initiate the animation effect, if JavaScript is disabled it won't work. However, I did
 use the `no-js/js` approach of modernizr.js and to target the CSS properties accordingly but I found it ran smoother
