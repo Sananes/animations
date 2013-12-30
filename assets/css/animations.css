@@ -1,0 +1,173 @@
+/*	Animations, Joe Mottershaw (hellojd)
+//	https://github.com/hellojd/animations
+//	================================================== */
+
+/*	#Global
+//	================================================== */
+
+	.animate {
+		-webkit-opacity: 0;
+		-khtml-opacity: 0;
+		-moz-opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);
+		opacity: 0;
+		-webkit-transition: all 1000ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 0ms;
+		-moz-transition: all 1000ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 0ms;
+		-o-transition: all 1000ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 0ms;
+		-ms-transition: all 1000ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 0ms;
+		transition: all 1000ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 0ms;
+	}
+
+	.animate.initiate {
+		-webkit-opacity: 1;
+		-khtml-opacity: 1;
+		-moz-opacity: 1;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		filter: alpha(opacity=100);
+		opacity: 1;
+	}
+
+
+/*	#Slide Up
+//	================================================== */
+
+	.animate.slide-up {
+		position: relative;
+		top: 100px;
+	}
+	 
+	.animate.slide-up.initiate { top: 0; }
+
+
+/*	#Slide Right
+//	================================================== */
+
+	.animate.slide-right {
+		position: relative;
+		left: -500px;
+	}
+	 
+	.animate.slide-right.initiate { left: 0; }
+
+
+/*	#Slide Down
+//	================================================== */
+
+	.animate.slide-down {
+		position: relative;
+		top: -100px;
+	}
+	 
+	.animate.slide-down.initiate { top: 0; }
+
+
+/*	#Slide Left
+//	================================================== */
+
+	.animate.slide-left {
+		position: relative;
+		left: 500px;
+	}
+	 
+	.animate.slide-left.initiate { left: 0; }
+
+
+/*	#Zoom In
+//	================================================== */
+
+	.animate.zoom-in {
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+		-o-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+	}
+	 
+	.animate.zoom-in.initiate {
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+
+
+/*	#Spin Right
+//	================================================== */
+
+	.animate.spin-right {
+		-webkit-transform: rotate(-360deg);
+		-moz-transform: rotate(-360deg);
+		-o-transform: rotate(-360deg);
+		-ms-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+	 
+	.animate.spin-right.initiate {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+
+/*	#Spin Left
+//	================================================== */
+
+	.animate.spin-left {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+	 
+	.animate.spin-left.initiate {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+
+/*	#Spin Right with Zoom In
+//	================================================== */
+
+	.animate.spin-right-zoom-in {
+		-webkit-transform: rotate(-360deg) scale(0);
+		-moz-transform: rotate(-360deg) scale(0);
+		-o-transform: rotate(-360deg) scale(0);
+		-ms-transform: rotate(-360deg) scale(0);
+		transform: rotate(-360deg) scale(0);
+	}
+	 
+	.animate.spin-right-zoom-in.initiate {
+		-webkit-transform: rotate(0deg) scale(1);
+		-moz-transform: rotate(0deg) scale(1);
+		-o-transform: rotate(0deg) scale(1);
+		-ms-transform: rotate(0deg) scale(1);
+		transform: rotate(0deg) scale(1);
+	}
+
+
+/*	#Spin Left with Zoom In
+//	================================================== */
+
+	.animate.spin-left-zoom-in {
+		-webkit-transform: rotate(360deg) scale(0);
+		-moz-transform: rotate(360deg) scale(0);
+		-o-transform: rotate(360deg) scale(0);
+		-ms-transform: rotate(360deg) scale(0);
+		transform: rotate(360deg) scale(0);
+	}
+	 
+	.animate.spin-left-zoom-in.initiate {
+		-webkit-transform: rotate(0deg) scale(1);
+		-moz-transform: rotate(0deg) scale(1);
+		-o-transform: rotate(0deg) scale(1);
+		-ms-transform: rotate(0deg) scale(1);
+		transform: rotate(0deg) scale(1);
+	}
