@@ -1,38 +1,62 @@
 Animations
 ==========
 
-Easily add a set of predefined animation effects for elements to fire as they enter the viewport.
-
-I've already come across a few strange results and problems which I'm going to have to fix, mainly so most use
-cases are covered. Most of the problems are because of other CSS values that the element had already or the type of
-element it was (`inline` or `block`) and it's caused conflicts which has shown some very interesting results to say
-the least.
-
-I've used it in a couple sites and just tested as I go and kept it pretty basic like in this demo:
+Easily add a set of predefined CSS3 animations to elements to execute as they enter the viewport or to trigger via JavaScript or mouse hover.
 
 **Demo:** http://www.cloud-eight.com/github/animations/
 
-Since it uses JavaScript to initiate the animation effect, if JavaScript is disabled it won't work. However, I did
-use the `no-js/js` approach of modernizr.js and to target the CSS properties accordingly but I found it ran smoother
-using a `noscript` approach and just reverting the CSS values defined by the animation.css file.
 
-It's not pretty, but it got the job done and will do suffice until a better solution is found.
-
-Also note that this doesn't work in Tablets/Mobiles very well yet so it's been disabled in those sized devices
-
-
-How-To
-======
+Usage
+=======
 
 <ul>
-<li>Add the class `no-js` to your `html` tag</li>
-<li>Link both animation.css and animation.js to your document</li>
-<li>Copy the `noscript` from the `index.html` file after you've loaded your CSS files</li>
-<li>Add the class `animate` to the desired element</li>
-<li>Then add another class to that element with one of the effects: `slide-up` or `zoom-in` etc</li>
-<li>If you wish to put a delay the animation add the attribute `data-anim-delay`</li>
-<li>Give it a value in milliseconds to add a delay to the animation</li>
+  <li>Add the class `no-js` to your `html` tag</li>
+  <li>Link both animation.css and animation.js to your document</li>
 </ul>
+
+
+Animations
+==========
+
+The bulk of the plugin will auto detect elements in view on page load, any other element assigned with the `animate` class and a `data-anim-type` attribute
+will be executed as it enters the viewport.
+
+<ul>
+  <li>Add the class `animate` to the desired element</li>
+  <li>Add the attribute `data-anim-type` with an animation type</li>
+  <li>(Optional) Add the attribute `data-anim-delay` if you wish to put a delay (in ms) on the animation</li>
+</ul>
+
+```
+<span class="animate" data-anim-type="bounceIn" data-anim-delay="200">Bouncy Bouncy</span>
+```
+
+
+Triggers and Hovers
+===================
+
+There are 2 types of predefined trigger functions, 1 that executes the animation once and another which loops continuously.
+You can pass 2 variables into these functions and that is the ID/Class of the target element and what type of animation you want to execute.
+
+```
+<button onclick="triggerOnce('#logo', 'wave');">Wave Once</button>
+<button onclick="triggerInfinite('#logo', 'wave');">Wave Continuously</button>
+```
+
+You can also use `onHover*` class to assign the animation to the `:hover` psuedo selector, adding the class infinite will continuously loop the animation while hovering.
+
+```
+<button class="onHoverSpin">Spin Once</button>
+<button class="onHoverSpin infinite">Spin Continuously</button>
+```
+
+
+Limitations
+===========
+
+Since this uses Digital Fusions' visible plugin, the same limitations apply to this also. In that it will not check for visibility in nested scrollable areas, only on the main viewport (window object).
+Animations executing on elements entering the viewport will not work if JavaScript is disabled, it will just display the element normal.
+Animations are currently limited to desktops with a screensize of 960px and higher, however Triggers and Hovers will work on the majority of touch devices.
 
 
 Author

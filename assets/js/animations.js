@@ -2,47 +2,82 @@
 //	https://github.com/hellojd/animations
 //	==================================================
 
-//	#Global
+//	Visible, Sam Sehnert, samatdf, TeamDF
+//	https://github.com/teamdf/jquery-visible/
 //	==================================================
 
+	(function($){
+		$.fn.visible = function(partial,hidden,direction) {
+			var $t				= $(this).eq(0),
+				t				= $t.get(0),
+				$w				= $(window),
+				viewTop			= $w.scrollTop(),
+				viewBottom		= viewTop + $w.height(),
+				viewLeft		= $w.scrollLeft(),
+				viewRight		= viewLeft + $w.width(),
+				_top			= $t.offset().top,
+				_bottom			= _top + $t.height(),
+				_left			= $t.offset().left,
+				_right			= _left + $t.width(),
+				compareTop		= partial === true ? _bottom : _top,
+				compareBottom	= partial === true ? _top : _bottom,
+				compareLeft		= partial === true ? _right : _left,
+				compareRight	= partial === true ? _left : _right,
+				clientSize		= hidden === true ? t.offsetWidth * t.offsetHeight : true,
+				direction		= (direction) ? direction : 'both';
 
-	$(document).ready(function() {
-		$('html').removeClass('no-js').addClass('js');
+			if(direction === 'both')
+				return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop)) && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+			else if(direction === 'vertical')
+				return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+			else if(direction === 'horizontal')
+				return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+		};
 
-		$('.animate').each(function(i, element) {
-			var	element = $(element),
-				delay = $(this).attr('data-anim-delay');
+		$.fn.fireAnimations = function(options) {
+			function animate() {
+				$('.animate').each(function(i, elem) {
+					var	elem = $(elem),
+						type = $(this).attr('data-anim-type'),
+						delay = $(this).attr('data-anim-delay');
 
-			if (element.visible(true)) {
-				setTimeout(function() {
-					element.addClass('initiate');
-				}, delay);
-			} 
-		});
-	});
+					if (elem.visible(true)) {
+						setTimeout(function() {
+							elem.addClass(type);
+						}, delay);
+					} 
+				});
+			}
 
-	$(window).scroll(function(e) {
-		$('.animate').each(function(i, element) {
-			var element = $(element),
-				delay = $(this).attr('data-anim-delay');
+			$(document).ready(function() {
+				$('html').removeClass('no-js').addClass('js');
 
-			if (element.visible(true)) {
-				setTimeout(function() {
-					element.addClass('initiate');
-				}, delay);
-			} 
-		});
-
-		if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-			$('.animate').each(function(i, element) {
-				var element = $(element),
-					delay = $(this).attr('data-anim-delay');
-
-				if (element.visible(true)) {
-					setTimeout(function() {
-						element.addClass('initiate');
-					}, delay);
-				} 
+				animate();
 			});
-		}
-	});
+
+			$(window).scroll(function() {
+				animate();
+
+				if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+					animate();
+				}
+			});
+		};
+
+		$('.animate').fireAnimations();
+
+	})(jQuery);
+
+	var triggerClasses = 'flash strobe shake bounce tada wave spin pullback wobble pulse pulsate heartbeat panic explode';
+
+	function triggerOnce(target, type) {
+		$(target).removeClass('trigger infinite ' + triggerClasses).addClass('trigger').addClass(type).one('webkitAnimationEnd oAnimationEnd MSAnimationEnd animationend', function() {
+			$(this).removeClass('trigger infinite ' + triggerClasses);
+		});
+	}
+
+	function triggerInfinite(target, type) {
+		$(target).removeClass('trigger infinite ' + triggerClasses).addClass('trigger infinite').addClass(type).one('webkitAnimationEnd oAnimationEnd MSAnimationEnd animationend', function() {
+			$(this).removeClass('trigger infinite ' + triggerClasses);
+		});
+	}
