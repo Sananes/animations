@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Animations by hellojd</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/hellojd/animations">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Animations</h1>
+            <h2>Easily add a set of predefined CSS3 animations to elements to execute as they enter the viewport or to trigger via JavaScript or mouse hover.</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/hellojd/animations/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/hellojd/animations/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a name="animations" class="anchor" href="#animations"><span class="octicon octicon-link"></span></a>Animations</h1>
+
+<p>Easily add a set of predefined CSS3 animations to elements to execute as they enter the viewport or to trigger via JavaScript or mouse hover.</p>
+
+<p><strong>Demo:</strong> <a href="http://www.cloud-eight.com/github/animations/">http://www.cloud-eight.com/github/animations/</a></p>
+
+<h1>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<ul>
+<li>Add the class `no-js` to your `html` tag</li>
+  <li>Link both animations.css and animations.js to your document</li>
+</ul><h1>
+<a name="animations-1" class="anchor" href="#animations-1"><span class="octicon octicon-link"></span></a>Animations</h1>
+
+<p>The bulk of the plugin will auto detect elements in view on page load, any other element assigned with the <code>animate</code> class and a <code>data-anim-type</code> attribute
+will be executed as it enters the viewport.</p>
+
+<ul>
+<li>Add the class `animate` to the desired element</li>
+  <li>Add the attribute `data-anim-type` with an animation type</li>
+  <li>(Optional) Add the attribute `data-anim-delay` if you wish to put a delay (in ms) on the animation</li>
+</ul><pre><code>&lt;span class="animate" data-anim-type="bounceIn" data-anim-delay="200"&gt;Bouncy Bouncy&lt;/span&gt;
+</code></pre>
+
+<h1>
+<a name="triggers-and-hovers" class="anchor" href="#triggers-and-hovers"><span class="octicon octicon-link"></span></a>Triggers and Hovers</h1>
+
+<p>There are 2 types of predefined trigger functions, 1 that executes the animation once and another which loops continuously.
+You can pass 2 variables into these functions and that is the ID/Class of the target element and what type of animation you want to execute.
+Multiple elements can be targeted by seperating them with a comma.</p>
+
+<pre><code>&lt;button onclick="triggerOnce('#logo', 'wave');"&gt;Wave Once&lt;/button&gt;
+&lt;button onclick="triggerInfinite('#logo, #tagline', 'wave');"&gt;Wave Continuously&lt;/button&gt;
+</code></pre>
+
+<p>You can also use <code>onHover*</code> class to assign the animation to the <code>:hover</code> psuedo selector, adding the class <code>infinite</code> will continuously loop the animation while hovering.</p>
+
+<pre><code>&lt;button class="onHoverSpin"&gt;Spin Once&lt;/button&gt;
+&lt;button class="onHoverSpin infinite"&gt;Spin Continuously&lt;/button&gt;
+</code></pre>
+
+<h1>
+<a name="limitations" class="anchor" href="#limitations"><span class="octicon octicon-link"></span></a>Limitations</h1>
+
+<p>Since this uses Digital Fusions' visible plugin, the same limitations apply to this also, in that it will not check for visibility in nested scrollable areas, only on the main viewport (window object).
+Animations executing on elements entering the viewport will not work if JavaScript is disabled, it will just display the element normally.
+Animations are currently limited to desktops with a screensize of 960px and higher, however Triggers and Hovers will work on the majority of touch devices.</p>
+
+<h1>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h1>
+
+<p>Joe Mottershaw, Cloud Eight<br><a href="http://www.cloud-eight.com">http://www.cloud-eight.com</a></p>
+
+<h1>
+<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h1>
+
+<p>Visible.js, TeamDF, Digital Fusion<br><a href="http://www.teamdf.com">http://www.teamdf.com</a></p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/hellojd">hellojd</a> can be found on <a href="https://github.com/hellojd/animations">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
