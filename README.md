@@ -11,7 +11,7 @@ Usage
 
 <ul>
   <li>Add the class `no-js` to your `html` tag</li>
-  <li>Link both animation.css and animation.js to your document</li>
+  <li>Link both animations.css and animations.js to your document</li>
 </ul>
 
 
