@@ -1,7 +1,7 @@
 Animations
 ==========
 
-Easily add a set of predefined CSS3 animations to elements to execute as they enter the viewport or to trigger via JavaScript or mouse hover.
+Easily add a set of predefined CSS3 animations to elements to execute as they enter the viewport or to trigger via JavaScript or mouse hover. If you do end up using it on your site, let me know so I can see how people are implementing and using it :)
 
 **Demo:** http://www.cloud-eight.com/github/animations/
 
