@@ -37,13 +37,14 @@ Triggers and Hovers
 
 There are 2 types of predefined trigger functions, 1 that executes the animation once and another which loops continuously.
 You can pass 2 variables into these functions and that is the ID/Class of the target element and what type of animation you want to execute.
+Multiple elements can be targeted by seperating them with a comma.
 
 ```
 <button onclick="triggerOnce('#logo', 'wave');">Wave Once</button>
-<button onclick="triggerInfinite('#logo', 'wave');">Wave Continuously</button>
+<button onclick="triggerInfinite('#logo, #tagline', 'wave');">Wave Continuously</button>
 ```
 
-You can also use `onHover*` class to assign the animation to the `:hover` psuedo selector, adding the class infinite will continuously loop the animation while hovering.
+You can also use `onHover*` class to assign the animation to the `:hover` psuedo selector, adding the class `infinite` will continuously loop the animation while hovering.
 
 ```
 <button class="onHoverSpin">Spin Once</button>
@@ -54,8 +55,8 @@ You can also use `onHover*` class to assign the animation to the `:hover` psuedo
 Limitations
 ===========
 
-Since this uses Digital Fusions' visible plugin, the same limitations apply to this also. In that it will not check for visibility in nested scrollable areas, only on the main viewport (window object).
-Animations executing on elements entering the viewport will not work if JavaScript is disabled, it will just display the element normal.
+Since this uses Digital Fusions' visible plugin, the same limitations apply to this also, in that it will not check for visibility in nested scrollable areas, only on the main viewport (window object).
+Animations executing on elements entering the viewport will not work if JavaScript is disabled, it will just display the element normally.
 Animations are currently limited to desktops with a screensize of 960px and higher, however Triggers and Hovers will work on the majority of touch devices.
 
 
