@@ -67,16 +67,37 @@
 		$('.animate').fireAnimations();
 
 	})(jQuery);
+		
+	var	triggerClasses = 'flash strobe shake bounce tada wave spin pullback wobble pulse pulsate heartbeat panic explode';
+		
+	var	classesArray = new Array;
+		classesArray = triggerClasses.split(' ');
 
-	var triggerClasses = 'flash strobe shake bounce tada wave spin pullback wobble pulse pulsate heartbeat panic explode';
+	var	classAmount = classesArray.length;
+
+	function randomClass() {
+		var	random = Math.ceil(Math.random() * classAmount);
+
+		type = classesArray[random];
+
+		return type;
+	}
 
 	function triggerOnce(target, type) {
+		if (type == 'random') {
+			type = randomClass();
+		}
+
 		$(target).removeClass('trigger infinite ' + triggerClasses).addClass('trigger').addClass(type).one('webkitAnimationEnd oAnimationEnd MSAnimationEnd animationend', function() {
 			$(this).removeClass('trigger infinite ' + triggerClasses);
 		});
 	}
 
 	function triggerInfinite(target, type) {
+		if (type == 'random') {
+			type = randomClass();
+		}
+
 		$(target).removeClass('trigger infinite ' + triggerClasses).addClass('trigger infinite').addClass(type).one('webkitAnimationEnd oAnimationEnd MSAnimationEnd animationend', function() {
 			$(this).removeClass('trigger infinite ' + triggerClasses);
 		});

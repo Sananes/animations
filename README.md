@@ -31,6 +31,41 @@ will be executed as it enters the viewport.
 <span class="animate" data-anim-type="bounceIn" data-anim-delay="200">Bouncy Bouncy</span>
 ```
 
+| Animation        | Class Name     |
+|:----------------:|:--------------:|
+| Fade In          | fadeIn         |
+| Fade In Up       | fadeInUp       |
+| Fade In Down     | fadeInDown     |
+| Fade In Left     | fadeInLeft     |
+| Fade In Right    | fadeInRight    |
+| Fade Out         | fadeOut        |
+| Fade Out Up      | fadeOutUp      |
+| Fade Out Down    | fadeOutDown    |
+| Fade Out Left    | fadeOutLeft    |
+| Fade Out Right   | fadeOutRight   |
+| Zoom In          | zoomIn         |
+| Zoom In Up       | zoomInUp       |
+| Zoom In Down     | zoomInDown     |
+| Zoom In Left     | zoomInLeft     |
+| Zoom In Right    | zoomInright    |
+| Zoom Out         | zoomOut        |
+| Zoom Out Up      | zoomOutUp      |
+| Zoom Out Down    | zoomOutDown    |
+| Zoom Out Left    | zoomOutLeft    |
+| Zoom Out Right   | zoomOutRight   |
+| Bounce In        | bounceIn       |
+| Bounce In Up     | bounceInUp     |
+| Bounce In Down   | bounceInDown   |
+| Bounce In Left   | bounceInLeft   |
+| Bounce In Right  | bounceInRight  |
+| Bounce Out       | bounceOut      |
+| Bounce Out Up    | bounceOutUp    |
+| Bounce Out Down  | bounceOutDown  |
+| Bounce Out Left  | bounceOutLeft  |
+| Bounce Out Right | bounceOutRight |
+| Spin Left        | spinRight      |
+| Spin Right       | spinLeft       |
+
 
 Triggers and Hovers
 ===================
@@ -50,6 +85,24 @@ You can also use `onHover*` class to assign the animation to the `:hover` psuedo
 <button class="onHoverSpin">Spin Once</button>
 <button class="onHoverSpin infinite">Spin Continuously</button>
 ```
+
+| Animation  | Triggers | Hovers | Class Name |
+|:----------:|:--------:|:------:|:----------:|
+| Flash      | Yes      | Yes    | flash      |
+| Strobe     | Yes      | Yes    | strobe     |
+| Shake      | Yes      | Yes    | shake      |
+| Bounce     | Yes      | Yes    | bounce     |
+| Tada       | Yes      | Yes    | tada       |
+| Wave       | Yes      | Yes    | wave       |
+| Spin       | Yes      | Yes    | spin       |
+| Pullback   | Yes      | Yes    | pullback   |
+| Wobble     | Yes      | Yes    | wobble     |
+| Pulse      | Yes      | Yes    | pulse      |
+| Pulsate    | Yes      | Yes    | pulsate    |
+| Heartbeat  | Yes      | Yes    | heartbeat  |
+| Panic      | Yes      | Yes    | panic      |
+| Explode    | Yes      | No     | explode    |
+| Random     | Yes      | No     | random     |
 
 
 Limitations
