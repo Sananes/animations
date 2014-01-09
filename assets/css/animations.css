@@ -110,6 +110,7 @@
 	.onHoverPanic,
 	.onHoverExplode { opacity: 1; }
 
+	.animate.infinite,
 	.trigger.infinite,
 	.onHoverFlash.infinite,
 	.onHoverStrobe.infinite,
