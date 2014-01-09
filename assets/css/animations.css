@@ -1,4 +1,4 @@
-/*	Animations, Joe Mottershaw (hellojd)
+/*	Animations v1.1, Joe Mottershaw (hellojd)
 //	https://github.com/hellojd/animations
 //	================================================== */
 
@@ -64,7 +64,7 @@
 /*	#Global
 //	================================================== */
 
-	.js .animate,
+	.animate,
 	.trigger,
 	.onHoverFlash,
 	.onHoverStrobe,
@@ -93,6 +93,7 @@
 		animation-fill-mode: both;
 	}
 
+	.no-js .animate,
 	.trigger,
 	.onHoverFlash,
 	.onHoverStrobe,
@@ -129,17 +130,6 @@
 		-ms-animation-iteration-count: infinite;
 		-o-animation-iteration-count: infinite;
 		animation-iteration-count: infinite;
-	}
-
-	@media only screen and (max-width: 959px) {
-		.js .animate {
-			opacity: 1;
-			-webkit-animation-duration: 0;
-			-moz-animation-duration: 0;
-			-ms-animation-duration: 0;
-			-o-animation-duration: 0s;
-			animation-duration: 0;
-		}
 	}
 
 

@@ -1,4 +1,4 @@
-//	Animations, Joe Mottershaw (hellojd)
+//	Animations v1.1, Joe Mottershaw (hellojd)
 //	https://github.com/hellojd/animations
 //	==================================================
 
@@ -36,17 +36,29 @@
 
 		$.fn.fireAnimations = function(options) {
 			function animate() {
-				$('.animate').each(function(i, elem) {
-					var	elem = $(elem),
-						type = $(this).attr('data-anim-type'),
-						delay = $(this).attr('data-anim-delay');
+				if ($(window).width() >= 960) {
+					$('.animate').each(function(i, elem) {
+						var	elem = $(elem),
+							type = $(this).attr('data-anim-type'),
+							delay = $(this).attr('data-anim-delay');
 
-					if (elem.visible(true)) {
-						setTimeout(function() {
-							elem.addClass(type);
-						}, delay);
-					} 
-				});
+						if (elem.visible(true)) {
+							setTimeout(function() {
+								elem.addClass(type);
+							}, delay);
+						} 
+					});
+				} else {
+					$('.animate').each(function(i, elem) {
+						var	elem = $(elem),
+							type = $(this).attr('data-anim-type'),
+							delay = $(this).attr('data-anim-delay');
+
+							setTimeout(function() {
+								elem.addClass(type);
+							}, delay);
+					});
+				}
 			}
 
 			$(document).ready(function() {
@@ -102,3 +114,7 @@
 			$(this).removeClass('trigger infinite ' + triggerClasses);
 		});
 	}
+
+	$(window).resize(function() {
+		$('.animate').fireAnimations();
+	});
